@@ -7,8 +7,14 @@ class ObservableAppState extends EventEmitter {
     new Notes({
       name: 'Leg Day',
       writings: 'First we will start with lightweight leg press, 4-6 set of 15-25 reps'
+    }),
+    new Notes({
+      name: 'Rest Day',
+      writings: ''
     })
   ]
+  /** @type {Notes} */
+  activeNote = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

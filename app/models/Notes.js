@@ -1,4 +1,5 @@
 import { generateId } from "../utils/GenerateId.js";
+import { AppState } from "../AppState.js";
 
 export class Notes {
     constructor(data) {

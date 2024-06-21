@@ -22,19 +22,21 @@
       </section>
       <section class="img-backGround">
         <div class="container-fluid">
-          <button onclick="app.NoteController.showAllNotes()" class="my-4 btn btn-primary mdi mdi-arrow-right-bold" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></button>
-
-          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notes</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body"></div>
-          </div>
           <div class="row">
-            <div class="col-12">
+            <div class="col-12" id="newNotes">
+              <button class="btn btn-warning mdi mdi-plus my-5" onclick="app.NoteController.drawNotes()"></button>
+              <button class="btn btn-success mdi mdi-content-save my-5" onclick="app.NoteController.saveNotes()"></button>
               <div class="d-flex align-items-center p-5 justify-content-center">
                 <h1 class="text-light">Whats On Your Mind?🤔</h1>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="d-flex justify-content-end">
+                        <textarea name="" id="" cols="30" rows="20"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

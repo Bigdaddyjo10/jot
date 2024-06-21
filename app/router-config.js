@@ -7,10 +7,7 @@ export const router = new Router([
   {
     path: '',
     controllers: [NoteController],
-    view: ``
+    view: 'app/views/Notes.html',
   },
-  {
-    path: '',
-    view: ''
-  }
+
 ])

@@ -2,7 +2,7 @@ import { AppState } from "../AppState.js";
 
 class NoteService {
     createNotes(data) {
-        const note = AppState.notes
+        const note = AppState.activeNote
     }
 }
 
