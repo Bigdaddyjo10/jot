@@ -22,13 +22,22 @@
       </section>
       <section class="img-backGround">
         <div class="container-fluid">
+          <button onclick="app.NoteController.showAllNotes()" class="my-4 btn btn-primary mdi mdi-arrow-right-bold" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></button>
+
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notes</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body"></div>
+          </div>
           <div class="row">
             <div class="col-12">
-<h1>Whats On Your Mind?🤔</h1>
-              <button></button>
+              <div class="d-flex align-items-center p-5 justify-content-center">
+                <h1 class="text-light">Whats On Your Mind?🤔</h1>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       </section>
     </main>
