@@ -6,11 +6,15 @@ class ObservableAppState extends EventEmitter {
   notes = [
     new Notes({
       name: 'Leg Day',
-      writings: 'First we will start with lightweight leg press, 4-6 set of 15-25 reps'
+      writings: 'blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah'
     }),
     new Notes({
-      name: 'Rest Day',
-      writings: ''
+      name: 'chest day',
+      writings: 'blah blah blah blah blah blah blah blah'
+    }),
+    new Notes({
+      name: 'back day',
+      writings: 'blah blah blah blah blah blah blah blah blah blah blah blah blah'
     })
   ]
   /** @type {Notes} */
