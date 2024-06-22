@@ -11,39 +11,32 @@
     <title>jot</title>
   </head>
 
-  <body>
+  <body class="img-backGround">
     <!-- SECTION -->
-    <header></header>
+    <header>
+      <div class="d-flex justify-content-center">
+        <h2 class="text-light my-5">Whats On Your Mind?🤔</h2>
+      </div>
+    </header>
 
     <!-- SECTION -->
     <main>
       <section id="router-view">
         <!-- primary viewport -->
       </section>
-      <section class="img-backGround">
-        <button class="btn btn-primary mdi mdi mdi-plus m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></button>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-          <div class="offcanvas-header">
-            <button class="btn btn-warning my-5">Add new notes</button>
-          </div>
-          <div class="offcanvas-body" id="oldNotes"></div>
-        </div>
+      <section>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-12">
-              <div class="d-flex align-items-center p-5 justify-content-center">
-                <h1 class="text-light">Whats On Your Mind?🤔</h1>
+            <div class="col-12 col-md-4">
+              <div class="text-light m-2">
+                <button class="btn btn-primary my-3" onclick="app.NoteController.drawThoughtPad()">Add Thoughts <i class="mdi mdi-pac-man"></i></button>
+                <ul id="oldNotes"></ul>
+              </div>
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="d-flex align-items-center p-2 justify-content-center">
                 <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="d-flex justify-content-end">
-                        <form onsubmit="app.NoteController.saveNotes()">
-                          <button class="btn btn-success mdi mdi-content-save my-1 d-flex justify-content-end" type="submit">Submit</button>
-                          <textarea name="writings" id="" cols="30" rows="20"></textarea>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
+                  <div class="d-flex justify-content-center" id="active-NotPad"></div>
                 </div>
               </div>
             </div>
