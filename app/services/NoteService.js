@@ -5,7 +5,6 @@ import { saveState } from "../utils/Store.js";
 
 class NoteService {
     createNotes(dataThought) {
-
         const thought = AppState.Thought
         const newThoughts = new Thoughts(dataThought)
         thought.push(newThoughts) // 💂 Thoughts!!!!!!!!!
@@ -16,7 +15,7 @@ class NoteService {
 
     saveThoughts() {
         saveState('Thought', AppState.Thought)
-        console.log('saving');
+        console.log('add to side🍳🍳🍳');
     }
 }
 export const noteService = new NoteService()

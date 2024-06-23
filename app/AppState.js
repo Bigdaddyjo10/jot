@@ -12,10 +12,6 @@ class ObservableAppState extends EventEmitter {
       name: 'Chest Day',
       writings: "Success isn't always about greatness.It's about consistency. Consistent hard work gains success Don't limit your challenges.Challenge your limits."
     }),
-    new Thoughts({
-      name: 'Back Day',
-      writings: "It's not about having time; it's about making time he only bad workout is the one that didn't happen"
-    })
   ]
   /** @type {Thoughts} */
   activeThoughts = null

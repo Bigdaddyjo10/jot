@@ -2,6 +2,7 @@ import { AppState } from "../AppState.js";
 import { setHTML } from "../utils/Writer.js";
 import { getFormData } from "../utils/FormHandler.js";
 import { Thoughts } from '../models/Thoughts.js'
+import { noteService } from "../services/NoteService.js";
 
 
 export class NoteController {
@@ -18,22 +19,24 @@ export class NoteController {
     drawOldNotes() {
         let oldThoughts = AppState.activeThoughts
         oldThoughts.DrawOldNots
-        console.log("Scooby Doo");
     }
 
     saveNotes() {
         event.preventDefault();
         const form = event.target
         const formData = getFormData(form)
-
-        console.log(formData);
-        console.log("Garfield🙀🙀");
+        // @ts-ignore
+        const textarea = form.writings
+        // @ts-ignore
+        const btnLabel = form.name
+        const newBtnLabel = btnLabel.value
+        const newDetails = textarea.value
+        console.log(newBtnLabel + '✅ ✅ ✅', newDetails);
     }
 
+
     drawThoughtPad() {
-        // const activeThoughts = AppState.Thought
         let activeHTML = Thoughts.prototype.DrawNotePad
         setHTML('active-NotPad', activeHTML)
-        console.log("Pizza");
     }
 }
