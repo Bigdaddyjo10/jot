@@ -1,48 +1,39 @@
 import { AppState } from "../AppState.js";
 import { setHTML } from "../utils/Writer.js";
 import { getFormData } from "../utils/FormHandler.js";
-import { Notes } from '../models/Notes.js'
+import { Thoughts } from '../models/Thoughts.js'
 
 
 export class NoteController {
 
     constructor() {
-        const words = AppState.notes
+        const words = AppState.Thought
         let listHTML = '';
-
-        words.forEach((word) => listHTML += word.drawOldNots)
+        words.forEach((word) => listHTML += word.DrawOldNots)
         setHTML('oldNotes', listHTML)
-
-        // AppState.on('activeThoughts', this.drawThoughtPad)
-
+        AppState.on('activeThoughts', this.drawThoughtPad)
     }
 
 
     drawOldNotes() {
         let oldThoughts = AppState.activeThoughts
-        oldThoughts.drawOldNots
+        oldThoughts.DrawOldNots
         console.log("Scooby Doo");
     }
 
     saveNotes() {
-        // event.preventDefault();
-        // const form = event.target
-        // const wordData = getFormData(form)
-        // let jots = AppState.activeThoughts.writings
-        // jots = wordData
-        // console.log(jots);
+        event.preventDefault();
+        const form = event.target
+        const formData = getFormData(form)
+
+        console.log(formData);
         console.log("Garfield🙀🙀");
     }
 
     drawThoughtPad() {
-        const activeThoughts = AppState.activeThoughts
-        let activeHTML = activeThoughts.drawNotePad
+        // const activeThoughts = AppState.Thought
+        let activeHTML = Thoughts.prototype.DrawNotePad
         setHTML('active-NotPad', activeHTML)
         console.log("Pizza");
     }
 }
-// drawActiveCaseFile() {
-//     const activeCaseFile = AppState.activeCaseFile
-//     let activeHTML = activeCaseFile.ActiveTemplate
-//     setHTML('active-case-file', activeHTML)
-// }
