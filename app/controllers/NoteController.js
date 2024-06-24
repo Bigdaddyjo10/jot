@@ -12,6 +12,7 @@ export class NoteController {
         let listHTML = '';
         words.forEach((word) => listHTML += word.DrawOldNots)
         setHTML('oldNotes', listHTML)
+
         AppState.on('activeThoughts', this.drawThoughtPad)
     }
 
@@ -31,7 +32,13 @@ export class NoteController {
         const btnLabel = form.name
         const newBtnLabel = btnLabel.value
         const newDetails = textarea.value
-        console.log(newBtnLabel + '✅ ✅ ✅', newDetails);
+
+        const addNewThought = AppState.Thought
+        addNewThought.push(newBtnLabel)
+        console.log(newBtnLabel, ' ✅ ✅ ✅ ');
+        console.log(AppState.Thought.length);
+
+
     }
 
 
